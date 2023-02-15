@@ -1,8 +1,13 @@
 import {useState} from 'react'
+import '../css/Conversor.css'
 
 const Conversor = ({moedaA, moedaB}) => {
     const [moedaAValue, setMoedaA] = useState('')
-    console.log(moedaAValue)
+    const [moedaBValue, setMoedaB] = useState(0)
+
+    function converter() {
+      
+    }
 
   return (
     <div className="conversor">
@@ -13,7 +18,7 @@ const Conversor = ({moedaA, moedaB}) => {
                 setMoedaA(event.target.value)
             }}
             />
-        <button>Converter</button>
+        <button onClick={converter}>Converter</button>
         <h2>Valor convertido</h2>
     </div>
   )
